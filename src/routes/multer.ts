@@ -33,7 +33,7 @@ const manualUpload = multer({
     storage: multerS3({
         s3: s3,
         bucket: 'projectmaplegreen',
-        acl: 'public-read',
+        // acl: 'public-read',
         key: function (req: Request, file: any, cb: Function) {
             cb(null, path.basename(file.originalname, path.extname(file.originalname)) + '-' + Date.now() + path.extname(file.originalname))
         }
