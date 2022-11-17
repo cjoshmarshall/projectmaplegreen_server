@@ -58,8 +58,8 @@ const removeUser = (socketId: string) => {
 
 const io = new Server(server, {
     cors: {
-        // origin: "http://localhost:3000",
-        origin: "https://projectmaplegreen.netlify.app"
+        origin: process.env.port || "http://localhost:3000",
+        // origin: "https://projectmaplegreen.netlify.app"
     }
 });
 
